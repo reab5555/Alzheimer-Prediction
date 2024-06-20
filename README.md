@@ -75,8 +75,8 @@ We used a neural network model and conducted a grid search to find the best hype
 ### Classification Report - Neural Network (NN) (Top 10 Features)
 | Class        | Precision  | Recall  | F1-Score  | Support  |
 |--------------|------------|---------|-----------|----------|
-| 0.0          | 0.901042   | 0.910526| 0.905759  | 760      |
-| 1.0          | 0.909574   | 0.900   | 0.904762  | 760      |
+| No Alzheimer | 0.901042   | 0.910526| 0.905759  | 760      |
+| Alzheimer    | 0.909574   | 0.900   | 0.904762  | 760      |
 | accuracy     |            |         | 0.905263  | 1520     |
 | macro avg    | 0.905308   | 0.905263| 0.905261  | 1520     |
 | weighted avg | 0.905308   | 0.905263| 0.905261  | 1520     |

@@ -1,6 +1,6 @@
 <img src="images/icon.webp" width="100" alt="alt text">
 
-# Alzheimer's Disease Prediction Dataset
+# Alzheimer's Disease Prediction
 
 This repository contains a dataset and a comprehensive analysis framework for predicting Alzheimer's Disease using various machine learning and deep learning models.
 

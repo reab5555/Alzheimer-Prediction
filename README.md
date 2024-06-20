@@ -157,7 +157,7 @@ Scripts:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/alzheimers-disease-prediction.git
+    git clone https://github.com/reab5555/alzheimers-disease-prediction.git
     cd alzheimers-disease-prediction
     ```
 
@@ -168,7 +168,7 @@ Scripts:
 
 ### How to Run
 
-1. Ensure the data file `alzheimers_disease_data.csv` is in the correct path as specified in the `data_preprocessing.py` script.
+1. Ensure the data file `alzheimers_dataset.csv` is in the correct path as specified in the `data_preprocessing.py` script.
 
 2. Run the main script:
     ```bash
@@ -195,7 +195,7 @@ Scripts:
 
 ### Notes
 
-- Ensure the data file `alzheimers_disease_data.csv` is in the correct path as specified in the `data_preprocessing.py` script.
+- Ensure the data file `alzheimers_dataset.csv` is in the correct path as specified in the `data_preprocessing.py` script.
 - Modify the file paths in the scripts if your directory structure is different.
 
 ### License

@@ -1,4 +1,4 @@
-<img src="images/icon.webp" width="100" alt="alt text">
+<img src="images/icon.jpeg" width="100" alt="alt text">
 
 # Alzheimer's Disease Prediction
 

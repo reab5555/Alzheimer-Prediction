@@ -142,3 +142,62 @@ Future analysis could involve:
 
 ## Conclusion
 This analysis provides a robust framework for predicting Alzheimer's Disease using health data. The findings offer valuable insights into the key factors associated with the disease and demonstrate the potential of machine learning models in supporting healthcare decision-making.
+
+
+## Setup
+
+Scripts:   
+- `data_preprocessing.py`: Loads and preprocesses the data, including scaling and resampling.   
+- `feature_selection.py`: Selects the top 10 features using `SelectKBest`.   
+- `simple_model_evaluation.py`: Evaluates simple models using all features and the top 10 features, saving the best F1 scores.   
+- `feature_importance.py`: Trains a Random Forest model and prints the feature importance.   
+- `layer_configurations.py`: Generates layer configurations and learning rates for the neural network.   
+- `neural_network.py`: Trains and evaluates a flexible neural network model using the best configurations.   
+- `main.py`: Main script to run all the above scripts in the correct order.   
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/alzheimers-disease-prediction.git
+    cd alzheimers-disease-prediction
+    ```
+
+2. Install the required packages:
+    ```bash
+    pip install pandas numpy scikit-learn imbalanced-learn tqdm matplotlib seaborn tabulate torch
+    ```
+
+### How to Run
+
+1. Ensure the data file `alzheimers_disease_data.csv` is in the correct path as specified in the `data_preprocessing.py` script.
+
+2. Run the main script:
+    ```bash
+    python main.py
+    ```
+
+### Description of Scripts
+
+- **device_check.py**: This script checks whether CUDA is available on the system and prints the device being used.
+  
+- **data_preprocessing.py**: This script loads the data from a CSV file, separates features and target, scales numerical features, and resamples the data to address class imbalance.
+
+- **feature_selection.py**: This script uses `SelectKBest` to select the top 10 features based on their importance and resamples the selected features.
+
+- **simple_model_evaluation.py**: This script evaluates several simple models (Logistic Regression, KNN, SVM, Random Forest, Gradient Boosting) using both all features and the top 10 features, performing cross-validation and saving the best F1 scores.
+
+- **feature_importance.py**: This script trains a Random Forest model using the full dataset, prints the feature importance, and checks whether the top 10 features are used.
+
+- **layer_configurations.py**: This script generates different layer configurations and learning rates for the neural network, saving them to a JSON file.
+
+- **neural_network.py**: This script trains a flexible neural network model using the configurations from `layer_configurations.py`, performs grid search with cross-validation to find the best configuration, plots learning curves, confusion matrix, and ROC curve, and saves the final trained model.
+
+- **main.py**: This script sequentially runs all the above scripts in the correct order.
+
+### Notes
+
+- Ensure the data file `alzheimers_disease_data.csv` is in the correct path as specified in the `data_preprocessing.py` script.
+- Modify the file paths in the scripts if your directory structure is different.
+
+### License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.

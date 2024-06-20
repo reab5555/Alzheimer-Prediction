@@ -90,9 +90,13 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 - **Learning Rate**: 0.01
 - **F1 Score**: 0.905
 
+----------------------------------------------------------------------------
 <img src="images/learning_curve.png" width="500" alt="alt text">
+----------------------------------------------------------------------------
 <img src="images/confusion_matrix.png" width="350" alt="alt text">
+----------------------------------------------------------------------------
 <img src="images/roc.png" width="350" alt="alt text">
+----------------------------------------------------------------------------
 
 ### Comparison of F1 Scores
 | Complexity | Model                   | F1 Score (All Features) | F1 Score (Top 10 Features) |

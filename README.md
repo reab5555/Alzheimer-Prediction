@@ -102,6 +102,7 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 | SVM                 | 0.815       | 0.888            |
 | Random Forest       | 0.922       | 0.928            |
 | Gradient Boosting   | 0.919       | 0.922            |
+| Neural Network (NN) |             | 0.905            |
 
 ### Top 15 Features Importance (Random Forest)
 These are the most constributing variables or features that predict positive diagnosis of Alzheimer:

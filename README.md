@@ -1,3 +1,5 @@
+<img src="images/icon.webp" width="100" alt="alt text">
+
 # Alzheimer's Disease Prediction Dataset
 
 This repository contains a dataset and a comprehensive analysis framework for predicting Alzheimer's Disease using various machine learning and deep learning models.
@@ -68,7 +70,9 @@ Initial data exploration involved checking for missing values, outliers, and inc
 The SelectKBest method from the sklearn.feature_selection module is a feature selection technique that selects the top k features based on a statistical measure of their relevance to the target variable. 
 
 ## Model Training and Evaluation
-We used a neural network model and conducted a grid search to find the best hyperparameters, including the number of layers, nodes, and learning rate. The grid search was performed using various configurations. Stratified cross-validation with 8 folds and downsampling for preprocessing were utilized to ensure balanced class distribution.
+We used a neural network model and conducted a grid search to find the best hyperparameters, including the number of layers, nodes, and learning rate. The grid search was performed using various configurations. Stratified cross-validation with 8 folds and downsampling for preprocessing were utilized to ensure balanced class distribution.   
+  
+We also experimented with 5 simplier and less complex models such as Logistic Regression, K-Nearest Neighbors, Support Vector Machine, Random Forrest, and Gradient Boosing with cross-validation with 8 folds.   
 
 ## Key Findings and Insights
 
@@ -85,6 +89,10 @@ We used a neural network model and conducted a grid search to find the best hype
 - **Layers**: [32, 32, 32]
 - **Learning Rate**: 0.01
 - **F1 Score**: 0.905
+
+<img src="images/learning_curve.png" width="600" alt="alt text">
+<img src="images/confusion_matrix.png" width="600" alt="alt text">
+<img src="images/roc.png" width="600" alt="alt text">
 
 ### Comparison of F1 Scores
 | Model               | All Features | Top 10 Features |

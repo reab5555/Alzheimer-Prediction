@@ -55,24 +55,24 @@ This dataset contains extensive health information for 2,149 patients, each uniq
 ### Target Prediction
 - **Diagnosis**: Diagnosis status for Alzheimer's Disease, where 0 indicates No and 1 indicates Yes.
 
-## Analysis Report
-
-### Main Objective
+## Main Objective
 The primary objective of this analysis is to explore the factors associated with Alzheimer's Disease, develop predictive models, and conduct statistical analyses to provide insights and predictive capabilities. The focus will be on a specific type of Deep Learning algorithm to improve prediction accuracy and provide valuable information to stakeholders, such as healthcare professionals and researchers.
 
-### Data Summary
+## Data Summary
 The dataset includes demographic details, lifestyle factors, medical history, clinical measurements, cognitive and functional assessments, symptoms, and diagnosis information. The data covers a wide range of features essential for understanding and predicting Alzheimer's Disease.
 
-### Data Exploration and Cleaning
+## Data Exploration and Cleaning
 Initial data exploration involved checking for missing values, outliers, and inconsistencies. Feature engineering steps included scaling numerical features, one-hot encoding categorical features, and undersampling to address class imbalance.
 
-### Model Training and Evaluation
-Three variations of the Deep Learning model were trained and evaluated:
-1. **Model 1**: Basic neural network with three hidden layers.
-2. **Model 2**: Neural network with dropout layers to prevent overfitting.
-3. **Model 3**: Neural network with different activation functions and layer configurations.
+## Features Selection:
+The SelectKBest method from the sklearn.feature_selection module is a feature selection technique that selects the top k features based on a statistical measure of their relevance to the target variable. 
 
-### Classification Report - Neural Network (NN)
+## Model Training and Evaluation
+We used a neural network model and conducted a grid search to find the best hyperparameters, including the number of layers, nodes, and learning rate. The grid search was performed using various configurations. Stratified cross-validation with 8 folds and downsampling for preprocessing were utilized to ensure balanced class distribution.
+
+## Key Findings and Insights
+
+### Classification Report - Neural Network (NN) (Top 10 Features)
 | Class        | Precision  | Recall  | F1-Score  | Support  |
 |--------------|------------|---------|-----------|----------|
 | 0.0          | 0.901042   | 0.910526| 0.905759  | 760      |
@@ -84,66 +84,19 @@ Three variations of the Deep Learning model were trained and evaluated:
 ### Best Configuration
 - **Layers**: [32, 32, 32]
 - **Learning Rate**: 0.01
-- **F1 Score**: 0.9047
-
-### Classification Report - Logistic Regression
-| Class        | Precision  | Recall  | F1-Score  | Support  |
-|--------------|------------|---------|-----------|----------|
-| 0.0          | 0.84       | 0.83    | 0.84      | 760      |
-| 1.0          | 0.83       | 0.85    | 0.84      | 760      |
-| accuracy     |            |         | 0.84      | 1520     |
-| macro avg    | 0.84       | 0.84    | 0.84      | 1520     |
-| weighted avg | 0.84       | 0.84    | 0.84      | 1520     |
-
-### Classification Report - KNN
-| Class        | Precision  | Recall  | F1-Score  | Support  |
-|--------------|------------|---------|-----------|----------|
-| 0.0          | 0.77       | 0.79    | 0.78      | 760      |
-| 1.0          | 0.78       | 0.76    | 0.77      | 760      |
-| accuracy     |            |         | 0.78      | 1520     |
-| macro avg    | 0.78       | 0.78    | 0.78      | 1520     |
-| weighted avg | 0.78       | 0.78    | 0.78      | 1520     |
-
-### Classification Report - SVM
-| Class        | Precision  | Recall  | F1-Score  | Support  |
-|--------------|------------|---------|-----------|----------|
-| 0.0          | 0.92       | 0.94    | 0.93      | 760      |
-| 1.0          | 0.93       | 0.92    | 0.93      | 760      |
-| accuracy     |            |         | 0.93      | 1520     |
-| macro avg    | 0.93       | 0.93    | 0.93      | 1520     |
-| weighted avg | 0.93       | 0.93    | 0.93      | 1520     |
-
-### Classification Report - Random Forest
-| Class        | Precision  | Recall  | F1-Score  | Support  |
-|--------------|------------|---------|-----------|----------|
-| 0.0          | 1.00       | 1.00    | 1.00      | 760      |
-| 1.0          | 1.00       | 1.00    | 1.00      | 760      |
-| accuracy     |            |         | 1.00      | 1520     |
-| macro avg    | 1.00       | 1.00    | 1.00      | 1520     |
-| weighted avg | 1.00       | 1.00    | 1.00      | 1520     |
-
-### Classification Report - Gradient Boosting
-| Class        | Precision  | Recall  | F1-Score  | Support  |
-|--------------|------------|---------|-----------|----------|
-| 0.0          | 0.94       | 0.97    | 0.96      | 760      |
-| 1.0          | 0.97       | 0.94    | 0.95      | 760      |
-| accuracy     |            |         | 0.96      | 1520     |
-| macro avg    | 0.96       | 0.96    | 0.96      | 1520     |
-| weighted avg | 0.96       | 0.96    | 0.96      | 1520     |
+- **F1 Score**: 0.905
 
 ### Comparison of F1 Scores
 | Model              | All Features | Top 10 Features |
 |--------------------|--------------|-----------------|
-| Logistic Regression| 0.8389       | 0.8342          |
-| KNN                | 0.7722       | 0.8883          |
-| SVM                | 0.9271       | 0.9414          |
-| Random Forest      | 1.0000       | 1.0000          |
-| Gradient Boosting  | 0.9545       | 0.9510          |
+| Logistic Regression| 0.8125       | 0.8217          |
+| KNN                | 0.7572       | 0.8234          |
+| SVM                | 0.8150       | 0.8881          |
+| Random Forest      | 0.9227       | 0.9285          |
+| Gradient Boosting  | 0.9191       | 0.9223          |
 
-### Using Top 10 Features
-- **Top 10 Features Used**: True
-
-### Top 15 Features from Feature Importance (Random Forest)
+### Top 15 Features Importance (Random Forest)
+These are the most constributing variables or features that predict positive diagnosis of Alzheimer:
 1. **FunctionalAssessment**: 0.1812
 2. **ADL**: 0.1603
 3. **MMSE**: 0.1304
@@ -161,17 +114,12 @@ Three variations of the Deep Learning model were trained and evaluated:
 15. **Age**: 0.0244
 
 ### Recommended Model
-Model 2, which included dropout layers, was found to provide the best balance between accuracy and generalization. This model demonstrated superior performance in predicting Alzheimer's Disease while avoiding overfitting.
+The best-performing model was the Random Forest, especially when using the top 10 features, achieving an F1 score of 0.9285. This model demonstrated superior performance in predicting Alzheimer's Disease.
 
-### Key Findings and Insights
-- **Top Features**: Functional assessment, ADL, MMSE, and memory complaints were among the most important features for predicting Alzheimer's Disease.
-- **Model Performance**: The best-performing model achieved an F1 score of 0.916, indicating high accuracy and reliability.
-- **Feature Importance**: The analysis highlighted the significance of cognitive and functional assessments in diagnosing Alzheimer's Disease.
-
-### Next Steps
+## Next Steps
 Future analysis could involve:
 - **Incorporating Additional Data**: Including more detailed genetic information or longitudinal data could enhance the model's predictive power.
-- **Model Refinement**: Experimenting with other machine learning algorithms or ensemble methods could further improve accuracy.
+- **Model Refinement**: Experimenting with other machine learning algorithms or ensemble methods, as well as setting different Neural Network hyperparameters that could further improve accuracy.
 - **Clinical Validation**: Collaborating with healthcare professionals to validate the model's predictions in a clinical setting.
 
 ## Conclusion

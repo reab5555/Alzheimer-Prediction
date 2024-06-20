@@ -91,8 +91,8 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 - **F1 Score**: 0.905
 
 <img src="images/learning_curve.png" width="500" alt="alt text">
-<img src="images/confusion_matrix.png" width="500" alt="alt text">
-<img src="images/roc.png" width="500" alt="alt text">
+<img src="images/confusion_matrix.png" width="350" alt="alt text">
+<img src="images/roc.png" width="350" alt="alt text">
 
 ### Comparison of F1 Scores
 | Model               | All Features | Top 10 Features |

@@ -96,13 +96,13 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 
 ### Comparison of F1 Scores
 | Model                  | All Features | Top 10 Features |
-|------------------------|----------- --|-----------------|
-| Logistic Regression    | 0.812        | 0.821            |
-| K-Nearest Neighbors    | 0.757        | 0.823            |
-| Support Vector Machine | 0.815        | 0.888            |
-| Random Forest          | 0.922        | 0.928            |
-| Gradient Boosting      | 0.919        | 0.922            |
-| Neural Network         |              | 0.905            |
+|------------------------|--------------|-----------------|
+| Logistic Regression    | 0.812        | 0.821           |
+| K-Nearest Neighbors    | 0.757        | 0.823           |
+| Support Vector Machine | 0.815        | 0.888           |
+| Random Forest          | 0.922        | 0.928           |
+| Gradient Boosting      | 0.919        | 0.922           |
+| Neural Network         |              | 0.905           |
 
 ### Top 15 Features Importance (Random Forest)
 These are the most constributing variables or features that predict positive diagnosis of Alzheimer:

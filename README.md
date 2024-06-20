@@ -97,21 +97,24 @@ We used a neural network model and conducted a grid search to find the best hype
 
 ### Top 15 Features Importance (Random Forest)
 These are the most constributing variables or features that predict positive diagnosis of Alzheimer:
-1. **FunctionalAssessment**: 0.1812
-2. **ADL**: 0.1603
-3. **MMSE**: 0.1304
-4. **MemoryComplaints**: 0.0827
-5. **BehavioralProblems**: 0.0490
-6. **BMI**: 0.0310
-7. **SleepQuality**: 0.0293
-8. **DietQuality**: 0.0293
-9. **CholesterolHDL**: 0.0287
-10. **CholesterolTriglycerides**: 0.0285
-11. **AlcoholConsumption**: 0.0276
-12. **PhysicalActivity**: 0.0269
-13. **CholesterolTotal**: 0.0267
-14. **CholesterolLDL**: 0.0260
-15. **Age**: 0.0244
+|       | Feature                   | Importance |
+|-------|---------------------------|------------|
+| 1     | FunctionalAssessment      | 0.1812     |
+| 2     | ADL                       | 0.1603     |
+| 3     | MMSE                      | 0.1304     |
+| 4     | MemoryComplaints          | 0.0827     |
+| 5     | BehavioralProblems        | 0.0490     |
+| 6     | BMI                       | 0.0310     |
+| 7     | SleepQuality              | 0.0293     |
+| 8     | DietQuality               | 0.0293     |
+| 9     | CholesterolHDL            | 0.0287     |
+| 10    | CholesterolTriglycerides  | 0.0285     |
+| 11    | AlcoholConsumption        | 0.0276     |
+| 12    | PhysicalActivity          | 0.0269     |
+| 13    | CholesterolTotal          | 0.0267     |
+| 14    | CholesterolLDL            | 0.0260     |
+| 15    | Age                       | 0.0244     |
+
 
 ### Recommended Model
 The best-performing model was the Random Forest, especially when using the top 10 features, achieving an F1 score of 0.9285. This model demonstrated superior performance in predicting Alzheimer's Disease.

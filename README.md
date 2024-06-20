@@ -73,13 +73,13 @@ We used a neural network model and conducted a grid search to find the best hype
 ## Key Findings and Insights
 
 ### Classification Report - Neural Network (NN) (Top 10 Features)
-| Class        | Precision  | Recall  | F1-Score  | Support  |
-|--------------|------------|---------|-----------|----------|
-| No Alzheimer | 0.901042   | 0.910526| 0.905759  | 760      |
-| Alzheimer    | 0.909574   | 0.900   | 0.904762  | 760      |
-| accuracy     |            |         | 0.905263  | 1520     |
-| macro avg    | 0.905308   | 0.905263| 0.905261  | 1520     |
-| weighted avg | 0.905308   | 0.905263| 0.905261  | 1520     |
+| Class        | Precision | Recall | F1-Score | Support  |
+|--------------|-----------|--------|----------|----------|
+| No Alzheimer | 0.901     | 0.910  | 0.905    | 760      |
+| Alzheimer    | 0.909     | 0.900  | 0.904    | 760      |
+| accuracy     |           |        | 0.905    | 1520     |
+| macro avg    | 0.905     | 0.905  | 0.905    | 1520     |
+| weighted avg | 0.905     | 0.905  | 0.905    | 1520     |
 
 ### Best Configuration
 - **Layers**: [32, 32, 32]
@@ -87,13 +87,13 @@ We used a neural network model and conducted a grid search to find the best hype
 - **F1 Score**: 0.905
 
 ### Comparison of F1 Scores
-| Model              | All Features | Top 10 Features |
-|--------------------|--------------|-----------------|
-| Logistic Regression| 0.8125       | 0.8217          |
-| KNN                | 0.7572       | 0.8234          |
-| SVM                | 0.8150       | 0.8881          |
-| Random Forest      | 0.9227       | 0.9285          |
-| Gradient Boosting  | 0.9191       | 0.9223          |
+| Model               | All Features | Top 10 Features |
+|---------------------|--------------|-----------------|
+| Logistic Regression | 0.812       | 0.821            |
+| KNN                 | 0.757       | 0.823            |
+| SVM                 | 0.815       | 0.888            |
+| Random Forest       | 0.922       | 0.928            |
+| Gradient Boosting   | 0.919       | 0.922            |
 
 ### Top 15 Features Importance (Random Forest)
 These are the most constributing variables or features that predict positive diagnosis of Alzheimer:

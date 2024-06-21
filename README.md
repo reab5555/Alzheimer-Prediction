@@ -108,10 +108,10 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 ## Key Findings and Insights
 
 ### Neural Network (NN) (All Features)
-| Class        | Precision | Recall | F1-Score | Support  |
-|--------------|-----------|--------|----------|----------|
-| No Alzheimer | 0.842     | 0.818  | 0.830    | 760      |
-| Alzheimer    | 0.823     | 0.847  | 0.835    | 760      |
+| Class            | Precision | Recall | F1-Score | Support  |
+|------------------|-----------|--------|----------|----------|
+| No Alzheimer (0) | 0.842     | 0.818  | 0.830    | 760      |
+| Alzheimer (1)    | 0.823     | 0.847  | 0.835    | 760      |
 
 ### Best Configuration
 - **Layers**: [128, 128, 128]

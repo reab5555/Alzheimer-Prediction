@@ -67,16 +67,16 @@ This dataset contains extensive health information for 2,149 patients, each uniq
 Initial data exploration involved checking for missing values, outliers, and inconsistencies. Feature engineering steps included scaling numerical features, one-hot encoding categorical features, and undersampling to address class imbalance.
 
 Class distribution before resampling:
-| Diagnosis | Samples |
-|-----------|---------|
-| 0         | 1389    |     
-| 1         | 760     |
+| Diagnosis        | Samples |
+|------------------|---------|
+| No Alzheimer (0) | 1389    |     
+| Alzheimer (1)    | 760     |
 
 Class distribution after resampling:
-| Diagnosis | Samples |
-|-----------|---------|
-| 0         | 760    |     
-| 1         | 760     |
+| Diagnosis        | Samples |
+|------------------|---------|
+| No Alzheimer (0) | 760     |     
+| Alzheimer (1)    | 760     |
 
 
 ## Features Selection:

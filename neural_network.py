@@ -47,7 +47,7 @@ class FlexibleAlzheimerNet(nn.Module):
         return self.model(x)
 
 # Function to train the model with early stopping
-def train_model(model, X_train, y_train, X_val, y_val, epochs=250, batch_size=128, patience=2, learning_rate=0.001,
+def train_model(model, X_train, y_train, X_val, y_val, epochs=250, batch_size=64, patience=2, learning_rate=0.001,
                 fold=1):
     criterion = nn.BCELoss()
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)

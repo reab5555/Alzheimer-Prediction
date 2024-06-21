@@ -19,9 +19,9 @@ print(f"Using device: {device}")
 
 # Load the data
 X_numpy = pd.read_csv("X_resampled.csv").values
-y_numpy = pd.read_csv("y_resampled.csv", header=None).squeeze().values
+y_numpy = pd.read_csv("y_resampled.csv").squeeze().values
 X_top10_resampled = pd.read_csv("X_top10_resampled.csv").values
-y_top10_resampled = pd.read_csv("y_top10_resampled.csv", header=None).squeeze().values
+y_top10_resampled = pd.read_csv("y_top10_resampled.csv").squeeze().values
 
 # Check which features to use
 with open("use_top10.txt", "r") as f:

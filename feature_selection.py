@@ -4,7 +4,11 @@ from imblearn.under_sampling import RandomUnderSampler
 
 # Load the data
 X = pd.read_csv("X_resampled.csv")
-y = pd.read_csv("y_resampled.csv", header=None).squeeze()
+y = pd.read_csv("y_resampled.csv").squeeze()
+
+# Ensure X and y have the same number of samples
+if len(X) != len(y):
+    raise ValueError(f"Inconsistent number of samples: X has {len(X)}, y has {len(y)}")
 
 # Select top 10 features using SelectKBest
 selector = SelectKBest(f_classif, k=10)

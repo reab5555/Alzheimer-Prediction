@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 # Load the data
 X = pd.read_csv("X_resampled.csv")
-y = pd.read_csv("y_resampled.csv", header=None).squeeze()
+y = pd.read_csv("y_resampled.csv").squeeze()
 
 # Load the best F1 scores from evaluation scripts
 with open("best_f1_scores_all.json", "r") as f:

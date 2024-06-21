@@ -11,9 +11,9 @@ import json
 
 # Load the data
 X_numpy = pd.read_csv("X_resampled.csv").values
-y_numpy = pd.read_csv("y_resampled.csv", header=None).squeeze().values
+y_numpy = pd.read_csv("y_resampled.csv").squeeze().values
 X_top10_resampled = pd.read_csv("X_top10_resampled.csv").values
-y_top10_resampled = pd.read_csv("y_top10_resampled.csv", header=None).squeeze().values
+y_top10_resampled = pd.read_csv("y_top10_resampled.csv").squeeze().values
 
 def evaluate_simple_models(X, y, cv=8):
     models = {
@@ -26,9 +26,9 @@ def evaluate_simple_models(X, y, cv=8):
 
     param_grids = {
         'Logistic Regression': {'C': [0.01, 0.1, 1, 10, 25, 50, 100]},
-        'KNN': {'n_neighbors': [3, 5, 7, 10, 15, 25, 50]},
+        'KNN': {'n_neighbors': [3, 5, 7, 10, 15, 25, 50, 70, 100]},
         'SVM': {'C': [0.01, 0.1, 1, 5, 10, 100]},
-        'Random Forest': {'n_estimators': [50, 100, 200, 250, 300]},
+        'Random Forest': {'n_estimators': [50, 100, 200, 250, 300, 350, 400, 500]},
         'Gradient Boosting': {'learning_rate': [0.01, 0.1, 0.2], 'n_estimators': [50, 100, 150, 200]}
     }
 

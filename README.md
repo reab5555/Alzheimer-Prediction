@@ -94,7 +94,13 @@ Selected As top 10 Features:
 - Ethnicity 2
 - EducationLevel 0   
 
-We can also view this as a correlation matrix and see the top 5 features:   
+----------------------------------------------------------------------------
+
+<p align="center">
+  <img src="images/eda.png" width="700" />
+</p>
+
+----------------------------------------------------------------------------
 
 ## Model Training and Evaluation
 We used a neural network model and conducted a grid search to find the best hyperparameters, including the number of layers, nodes, and learning rate. The grid search was performed using various configurations. Stratified cross-validation with 8 folds and downsampling for preprocessing were utilized to ensure balanced class distribution.   

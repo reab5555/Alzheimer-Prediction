@@ -121,6 +121,7 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 
 ### Best Configuration
 - **Layers**: [16, 16, 16]
+- **Output**: Sigmoid
 - **Learning Rate**: 0.001
 - **Batch Size**: 64
 - **F1 Score**: 0.837

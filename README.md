@@ -83,16 +83,16 @@ Class distribution after resampling:
 The SelectKBest method from the sklearn.feature_selection module is a feature selection technique that selects the top k features based on a statistical measure of their relevance to the target variable. 
 
 Selected As top 10 Features:
-- CardiovascularDisease
-- CholesterolHDL
+- Cardiovascular Disease
+- Cholesterol HDL
 - MMSE
-- FunctionalAssessment
-- MemoryComplaints
-- BehavioralProblems
+- Functional Assessment
+- Memory Complaints
+- Behavioral Problems
 - ADL
-- Ethnicity_1
-- Ethnicity_2
-- EducationLevel_0   
+- Ethnicity 1
+- Ethnicity 2
+- EducationLevel 0   
 
 We can also view this as a correlation matrix and see the top 5 features:   
 

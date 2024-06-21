@@ -141,7 +141,7 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 | 3          | Support Vector Machine  | C = 1 (Linear)            | C = 5 (Linear)               | 0.815                   | 0.888                      |
 | 4          | Random Forest           | Estimators = 500          | Estimators = 200             | 0.922                   | 0.928                      |
 | 5          | Gradient Boosting       | Estimators = 100          | Estimators = 100             | 0.919                   | 0.922                      |
-| 6          | Neural Network          | Layers = 16, 16, 16       |                              | 0.834                   |                            |
+| 6          | Neural Network          | Layers = [16, 16, 16]     |                              | 0.834                   |                            |
 
 Overall, it seems that the classification task is not too complex, as smaller and less complex model can yield better results.   
 

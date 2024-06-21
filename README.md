@@ -96,10 +96,6 @@ Selected As top 10 Features:
 
 We can also view this as a correlation matrix and see the top 5 features:   
 
-<img src="images/heatmap.png" width="400" alt="alt text">
-
-----------------------------------------------------------------------------
-
 ## Model Training and Evaluation
 We used a neural network model and conducted a grid search to find the best hyperparameters, including the number of layers, nodes, and learning rate. The grid search was performed using various configurations. Stratified cross-validation with 8 folds and downsampling for preprocessing were utilized to ensure balanced class distribution.   
   
@@ -110,14 +106,14 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 ### Neural Network (NN) (All Features)
 | Class            | Precision | Recall | F1-Score | Support  |
 |------------------|-----------|--------|----------|----------|
-| No Alzheimer (0) | 0.842     | 0.818  | 0.830    | 760      |
-| Alzheimer (1)    | 0.823     | 0.847  | 0.835    | 760      |
+| No Alzheimer (0) | 0.840     | 0.831  | 0.835    | 760      |
+| Alzheimer (1)    | 0.833     | 0.842  | 0.837    | 760      |
 
 ### Best Configuration
-- **Layers**: [128, 128, 128]
+- **Layers**: [16, 16, 16]
 - **Learning Rate**: 0.001
-- **Batch Size**: 128
-- **F1 Score**: 0.834
+- **Batch Size**: 64
+- **F1 Score**: 0.837
 
 ----------------------------------------------------------------------------
 
@@ -137,7 +133,7 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 | 3          | Support Vector Machine  | C = 1 (Linear)            | C = 5 (Linear)               | 0.815                   | 0.888                      |
 | 4          | Random Forest           | Estimators = 500          | Estimators = 200             | 0.922                   | 0.928                      |
 | 5          | Gradient Boosting       | Estimators = 100          | Estimators = 100             | 0.919                   | 0.922                      |
-| 6          | Neural Network          | Layers = [128, 128, 128]  |                              | 0.834                   |                            |
+| 6          | Neural Network          | Layers = 16, 16, 16       |                              | 0.834                   |                            |
 
 Overall, it seems that the classification task is not too complex, as smaller and less complex model can yield better results.   
 

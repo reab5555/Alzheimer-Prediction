@@ -105,7 +105,9 @@ Here we can see for example the distribution of each of the top features. furthe
 ----------------------------------------------------------------------------
 
 ## Model Training and Evaluation
-We used a neural network model and conducted a grid search to find the best hyperparameters, including the number of layers, nodes, and learning rate. The grid search was performed using various configurations. Stratified cross-validation with 8 folds and downsampling for preprocessing were utilized to ensure balanced class distribution.   
+We used a neural network model and conducted a grid search to find the best hyperparameters, including the number of layers, nodes, and learning rate. The grid search was performed using various configurations.   
+
+Stratified cross-validation with 8 folds and downsampling for preprocessing were utilized to ensure balanced class distribution.   
   
 We also experimented with 5 simplier and less complex models such as Logistic Regression, K-Nearest Neighbors, Support Vector Machine, Random Forrest, and Gradient Boosing with cross-validation with 8 folds.   
 

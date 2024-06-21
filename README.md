@@ -113,7 +113,7 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 
 ## Key Findings and Insights
 
-### Neural Network (All Features)
+### Neural Network (Using All Features)
 | Class            | Precision | Recall | F1-Score | Support  |
 |------------------|-----------|--------|----------|----------|
 | No Alzheimer (0) | 0.840     | 0.831  | 0.835    | 760      |

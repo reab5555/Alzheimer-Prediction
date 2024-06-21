@@ -89,18 +89,16 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 
 ## Key Findings and Insights
 
-### Classification Report - Neural Network (NN) (Top 10 Features)
+### Neural Network (NN) (All Features)
 | Class        | Precision | Recall | F1-Score | Support  |
 |--------------|-----------|--------|----------|----------|
-| No Alzheimer | 0.901     | 0.910  | 0.905    | 760      |
-| Alzheimer    | 0.909     | 0.900  | 0.904    | 760      |
-| accuracy     |           |        | 0.905    | 1520     |
-| macro avg    | 0.905     | 0.905  | 0.905    | 1520     |
-| weighted avg | 0.905     | 0.905  | 0.905    | 1520     |
+| No Alzheimer | 0.842     | 0.818  | 0.830    | 760      |
+| Alzheimer    | 0.823     | 0.847  | 0.835    | 760      |
 
 ### Best Configuration
-- **Layers**: [32, 32, 32]
-- **Learning Rate**: 0.01
+- **Layers**: [128, 128, 128]
+- **Learning Rate**: 0.001
+- **Batch Size**: 128
 - **F1 Score**: 0.905
 
 ----------------------------------------------------------------------------
@@ -121,7 +119,9 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 | 3          | Support Vector Machine  | C = 1 (Linear)            | C = 5 (Linear)               | 0.815                   | 0.888                      |
 | 4          | Random Forest           | Estimators = 500          | Estimators = 200             | 0.922                   | 0.928                      |
 | 5          | Gradient Boosting       | Estimators = 100          | Estimators = 100             | 0.919                   | 0.922                      |
-| 6          | Neural Network          |                           | Layers = [32, 32, 32]        |                         | 0.905                      |
+| 6          | Neural Network          | Layers = [128, 128, 128]  |                              | 0.834                   |                            |
+
+Overall, it seems that the classification task is not too complex, as smaller and less complex model can yield better results.   
 
 ### Top 10 Features Importance (Random Forest)
 These are the most constributing variables or features that predict positive diagnosis of Alzheimer:

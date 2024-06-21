@@ -145,7 +145,7 @@ These are the most constributing variables or features that predict positive dia
 
 We can also view this as a correlation matrix and see the top 5 features:   
 
-<img src="images/heatmap.png" width="600" alt="alt text">
+<img src="images/heatmap.png" width="400" alt="alt text">
 
 ### Recommended Model
 The best-performing model was the Random Forest, especially when using the top 10 features, achieving an F1 score of 0.9285. This model demonstrated superior performance in predicting Alzheimer's Disease.

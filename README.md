@@ -143,8 +143,8 @@ These are the most constributing variables or features that predict positive dia
 | 14    | Cholesterol LDL            | 0.0260     |
 | 15    | Age                        | 0.0244     |
 
-We can also view this as a correlation matrix (Features-Diagnosis):
-<img src="images/heatmap" width="500" alt="alt text">
+We can also view this as a correlation matrix and see the top 5 features:
+<img src="images/heatmap.png" width="500" alt="alt text">
 
 ### Recommended Model
 The best-performing model was the Random Forest, especially when using the top 10 features, achieving an F1 score of 0.9285. This model demonstrated superior performance in predicting Alzheimer's Disease.

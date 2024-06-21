@@ -165,7 +165,7 @@ Scripts:
 - `feature_importance.py`: Trains a Random Forest model and prints the feature importance.   
 - `layer_configurations.py`: Generates layer configurations and learning rates for the neural network.   
 - `neural_network.py`: Trains and evaluates a flexible neural network model using the best configurations.   
-- `main.py`: Main script to run all the above scripts in the correct order.   
+- `alzheimer_train_main.py`: Main script to run all the above scripts in the correct order.   
 
 1. Clone the repository:
     ```bash
@@ -184,24 +184,8 @@ Scripts:
 
 2. Run the main script:
     ```bash
-    python main.py
+    python alzheimer_train_main.py
     ```
-
-### Description of Scripts
-  
-- **data_preprocessing.py**: This script loads the data from a CSV file, separates features and target, scales numerical features, and resamples the data to address class imbalance.
-
-- **feature_selection.py**: This script uses `SelectKBest` to select the top 10 features based on their importance and resamples the selected features.
-
-- **simple_model_evaluation.py**: This script evaluates several simple models (Logistic Regression, KNN, SVM, Random Forest, Gradient Boosting) using both all features and the top 10 features, performing cross-validation and saving the best F1 scores.
-
-- **feature_importance.py**: This script trains a Random Forest model using the full dataset, prints the feature importance, and checks whether the top 10 features are used.
-
-- **layer_configurations.py**: This script generates different layer configurations and learning rates for the neural network, saving them to a JSON file.
-
-- **neural_network.py**: This script trains a flexible neural network model using the configurations from `layer_configurations.py`, performs grid search with cross-validation to find the best configuration, plots learning curves, confusion matrix, and ROC curve, and saves the final trained model.
-
-- **main.py**: This script sequentially runs all the above scripts in the correct order.
 
 ### Notes
 

@@ -118,7 +118,7 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 |------------|-------------------------|---------------------------|------------------------------|-------------------------|----------------------------|
 | 1          | Logistic Regression     | C = 10                    | C = 10                       | 0.812                   | 0.821                      |
 | 2          | K-Nearest Neighbors     | k = 50                    | k = 3                        | 0.757                   | 0.823                      |
-| 3          | Support Vector Machine  | C = 1 Kernel = Linear    | C = 5                        | 0.815                   | 0.888                      |
+| 3          | Support Vector Machine  | C = 1 + Kernel = Linear    | C = 5                        | 0.815                   | 0.888                      |
 | 4          | Random Forest           | Estimators = 500          | Estimators = 200             | 0.922                   | 0.928                      |
 | 5          | Gradient Boosting       | Estimators = 100          | Estimators = 100             | 0.919                   | 0.922                      |
 | 6          | Neural Network          |                           | Layers = [32, 32, 32]        |                         | 0.905                      |

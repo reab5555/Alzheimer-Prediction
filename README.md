@@ -15,7 +15,7 @@ The dataset includes demographic details, lifestyle factors, medical history, cl
 This dataset contains extensive health information for 2,149 patients, each uniquely identified with IDs ranging from 4751 to 6900. The dataset includes the following features:
 
 ### Patient Information
-- **Patient ID**: A unique identifier assigned to each patient (4751 to 6900) (omitted)..
+- **Patient ID**: A unique identifier assigned to each patient (4751 to 6900) (omitted).
 
 ### Demographic Details
 - **Age**: The age of the patients ranges from 60 to 90 years.

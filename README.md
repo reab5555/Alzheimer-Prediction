@@ -15,7 +15,7 @@ The dataset includes demographic details, lifestyle factors, medical history, cl
 This dataset contains extensive health information for 2,149 patients, each uniquely identified with IDs ranging from 4751 to 6900. The dataset includes the following features:
 
 ### Patient Information
-- **Patient ID**: A unique identifier assigned to each patient (4751 to 6900).
+- **Patient ID**: A unique identifier assigned to each patient (4751 to 6900) (omitted)..
 
 ### Demographic Details
 - **Age**: The age of the patients ranges from 60 to 90 years.
@@ -82,6 +82,24 @@ Class distribution after resampling:
 ## Features Selection:
 The SelectKBest method from the sklearn.feature_selection module is a feature selection technique that selects the top k features based on a statistical measure of their relevance to the target variable. 
 
+Selected As top 10 Features:
+- CardiovascularDisease
+- CholesterolHDL
+- MMSE
+- FunctionalAssessment
+- MemoryComplaints
+- BehavioralProblems
+- ADL
+- Ethnicity_1
+- Ethnicity_2
+- EducationLevel_0   
+
+We can also view this as a correlation matrix and see the top 5 features:   
+
+<img src="images/heatmap.png" width="400" alt="alt text">
+
+----------------------------------------------------------------------------
+
 ## Model Training and Evaluation
 We used a neural network model and conducted a grid search to find the best hyperparameters, including the number of layers, nodes, and learning rate. The grid search was performed using various configurations. Stratified cross-validation with 8 folds and downsampling for preprocessing were utilized to ensure balanced class distribution.   
   
@@ -99,7 +117,7 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 - **Layers**: [128, 128, 128]
 - **Learning Rate**: 0.001
 - **Batch Size**: 128
-- **F1 Score**: 0.905
+- **F1 Score**: 0.834
 
 ----------------------------------------------------------------------------
 
@@ -138,11 +156,6 @@ These are the most constributing variables or features that predict positive dia
 | 9     | Cholesterol HDL            | 0.0287     |
 | 10    | Cholesterol Triglycerides  | 0.0285     |
 
-We can also view this as a correlation matrix and see the top 5 features:   
-
-<img src="images/heatmap.png" width="400" alt="alt text">
-
-----------------------------------------------------------------------------
 
 ### Recommended Model
 The best-performing model was the Random Forest, especially when using the top 10 features, achieving an F1 score of 0.9285. This model demonstrated superior performance in predicting Alzheimer's Disease.   

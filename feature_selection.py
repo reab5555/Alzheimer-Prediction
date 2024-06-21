@@ -15,6 +15,8 @@ selector = SelectKBest(f_classif, k=10)
 X_new = selector.fit_transform(X, y)
 top_features = X.columns[selector.get_support(indices=True)]
 
+print('Selected Features:', top_features)
+
 # Resample top 10 features to match y_resampled
 rus = RandomUnderSampler(random_state=42)
 X_top10_resampled, y_top10_resampled = rus.fit_resample(X_new, y)

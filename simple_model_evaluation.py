@@ -27,7 +27,7 @@ def evaluate_simple_models(X, y, cv=8):
     param_grids = {
         'Logistic Regression': {'C': [0.01, 0.1, 1, 10, 25, 50, 100]},
         'KNN': {'n_neighbors': [3, 5, 7, 10, 15, 25, 50, 70, 100]},
-        'SVM': {'C': [0.01, 0.1, 1, 5, 10, 100]},
+        'SVM': {'C': [0.01, 0.1, 1, 5, 10, 100], 'kernel': ['linear', 'rbf', 'poly', 'sigmoid']},
         'Random Forest': {'n_estimators': [50, 100, 200, 250, 300, 350, 400, 500]},
         'Gradient Boosting': {'learning_rate': [0.01, 0.1, 0.2], 'n_estimators': [50, 100, 150, 200]}
     }
@@ -53,7 +53,6 @@ def evaluate_simple_models(X, y, cv=8):
         best_f1_scores[name] = cv_scores.mean()
         best_models[name] = best_model
 
-        print(f"Cross-validation F1 scores: {cv_scores}")
         print(f"Mean F1 score: {cv_scores.mean():.4f} (+/- {cv_scores.std() * 2:.4f})")
 
         # Step 4: Generate predictions for classification report
@@ -89,7 +88,3 @@ for model in best_f1_scores_all.keys():
 # Use the best set of features for neural network evaluation
 use_top10 = any(f1 > best_f1_scores_all[name] for name, f1 in best_f1_scores_top10.items())
 print(f"\nUsing top 10 features: {use_top10}")
-
-# Save the decision on which features to use
-with open("use_top10.txt", "w") as f:
-    f.write(str(use_top10))

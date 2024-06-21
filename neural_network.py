@@ -18,16 +18,9 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f"Using device: {device}")
 
 # Load the data
-X_numpy = pd.read_csv("X_resampled.csv").values
-y_numpy = pd.read_csv("y_resampled.csv").squeeze().values
-X_top10_resampled = pd.read_csv("X_top10_resampled.csv").values
-y_top10_resampled = pd.read_csv("y_top10_resampled.csv").squeeze().values
+X = pd.read_csv("X_resampled.csv").values
+y = pd.read_csv("y_resampled.csv").squeeze().values
 
-# Check which features to use
-with open("use_top10.txt", "r") as f:
-    use_top10 = f.read().lower() == 'true'
-
-X_to_use = X_top10_resampled if use_top10 else X_numpy
 
 # Load layer configurations and learning rates
 with open("layer_configurations.json", "r") as f:
@@ -181,10 +174,10 @@ for layer_sizes in layer_configs:
         all_train_losses = []
         all_val_losses = []
 
-        for fold, (train_index, val_index) in enumerate(skf.split(X_to_use, y_numpy), 1):
+        for fold, (train_index, val_index) in enumerate(skf.split(X, y), 1):
             # Split the data
-            X_train, X_val = X_to_use[train_index], X_to_use[val_index]
-            y_train, y_val = y_numpy[train_index], y_numpy[val_index]
+            X_train, X_val = X[train_index], X[val_index]
+            y_train, y_val = y[train_index], y[val_index]
 
             # Downsample training data
             rus = RandomUnderSampler(random_state=42)
@@ -267,15 +260,12 @@ plot_roc_curve(best_y_true, best_y_pred_proba)
 print(f"\nBest configuration: {best_config} with learning rate: {best_lr} and F1 score: {best_f1_score:.4f}")
 
 # Train final model with best configuration and learning rate
-final_model = FlexibleAlzheimerNet(X_numpy.shape[1], best_config).to(device)
-X_tensor = torch.FloatTensor(X_numpy).to(device)
-y_tensor = torch.FloatTensor(y_numpy).to(device)
+final_model = FlexibleAlzheimerNet(X.shape[1], best_config).to(device)
+X_tensor = torch.FloatTensor(X).to(device)
+y_tensor = torch.FloatTensor(y).to(device)
 train_losses, val_losses = train_model(final_model, X_tensor, y_tensor, X_tensor, y_tensor, learning_rate=best_lr)
 
 # Save the final model
 torch.save(final_model.state_dict(), 'alzheimer_prediction_model.pth')
 print("Final model saved as 'alzheimer_prediction_model.pth'")
 
-# Check if the best configuration is using top 10 features
-is_using_top10 = (X_to_use is X_top10_resampled)
-print(f"Best configuration is using top 10 features: {is_using_top10}")

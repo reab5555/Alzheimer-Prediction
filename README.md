@@ -193,8 +193,6 @@ Scripts:
     ```
 
 ### Description of Scripts
-
-- **device_check.py**: This script checks whether CUDA is available on the system and prints the device being used.
   
 - **data_preprocessing.py**: This script loads the data from a CSV file, separates features and target, scales numerical features, and resamples the data to address class imbalance.
 

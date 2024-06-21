@@ -123,7 +123,7 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 | 5          | Gradient Boosting       | Estimators = 100          | Estimators = 100             | 0.919                   | 0.922                      |
 | 6          | Neural Network          |                           | Layers = [32, 32, 32]        |                         | 0.905                      |
 
-### Top 15 Features Importance (Random Forest)
+### Top 10 Features Importance (Random Forest)
 These are the most constributing variables or features that predict positive diagnosis of Alzheimer:
 |       | Feature                    | Importance |
 |-------|----------------------------|------------|
@@ -137,11 +137,6 @@ These are the most constributing variables or features that predict positive dia
 | 8     | Diet Quality               | 0.0293     |
 | 9     | Cholesterol HDL            | 0.0287     |
 | 10    | Cholesterol Triglycerides  | 0.0285     |
-| 11    | Alcohol Consumption        | 0.0276     |
-| 12    | Physical Activity          | 0.0269     |
-| 13    | Cholesterol Total          | 0.0267     |
-| 14    | Cholesterol LDL            | 0.0260     |
-| 15    | Age                        | 0.0244     |
 
 We can also view this as a correlation matrix and see the top 5 features:   
 

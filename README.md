@@ -147,17 +147,18 @@ We can also view this as a correlation matrix and see the top 5 features:
 
 <img src="images/heatmap.png" width="400" alt="alt text">
 
-### Recommended Model
-The best-performing model was the Random Forest, especially when using the top 10 features, achieving an F1 score of 0.9285. This model demonstrated superior performance in predicting Alzheimer's Disease.
+----------------------------------------------------------------------------
 
-## Next Steps
+### Recommended Model
+The best-performing model was the Random Forest, especially when using the top 10 features, achieving an F1 score of 0.9285. This model demonstrated superior performance in predicting Alzheimer's Disease.   
+
+## Conclusion
+This analysis provides a robust framework for predicting Alzheimer's Disease using health data. The findings offer valuable insights into the key factors associated with the disease and demonstrate the potential of machine learning models in supporting healthcare decision-making.   
+   
 Future analysis could involve:
 - **Incorporating Additional Data**: Including more detailed genetic information or longitudinal data could enhance the model's predictive power.
 - **Model Refinement**: Experimenting with other machine learning algorithms or ensemble methods, as well as setting different Neural Network hyperparameters that could further improve accuracy.
 - **Clinical Validation**: Collaborating with healthcare professionals to validate the model's predictions in a clinical setting.
-
-## Conclusion
-This analysis provides a robust framework for predicting Alzheimer's Disease using health data. The findings offer valuable insights into the key factors associated with the disease and demonstrate the potential of machine learning models in supporting healthcare decision-making.
 
 
 ## Setup

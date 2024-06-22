@@ -151,6 +151,10 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 | 5          | Gradient Boosting       | Estimators = 100          | Estimators = 100             | 0.919                   | 0.922                      |
 | 6          | Neural Network          | Layers = [16, 16, 16]     |                              | 0.834                   |                            |
 
+| Model                   | Parameters (Top 10 Features) | F1 Score (Top 10 Features) |
+|-------------------------|------------------------------|----------------------------|
+| Random Forest           | C = 5 (Linear)               | 0.928                      |
+
 Overall, it seems that the classification task is not too complex, as smaller and less complex model can yield better results.   
 
 ### Top 10 Features Importance (Random Forest)

@@ -126,20 +126,8 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 - **Batch Size**: 64
 - **F1 Score**: 0.837
 
-<div style="display: flex; justify-content: space-between;">
-  <div>
-    <ul>
-      <li><strong>Layers</strong>: [16, 16, 16]</li>
-      <li><strong>Output</strong>: Sigmoid</li>
-      <li><strong>Learning Rate</strong>: 0.001</li>
-      <li><strong>Batch Size</strong>: 64</li>
-      <li><strong>F1 Score</strong>: 0.837</li>
-    </ul>
-  </div>
-  <div>
-    <img src="images/nn_architecture.svg" width="400" />
-  </div>
-</div>
+<img src="images/nn_architecture.svg" width="450" />
+
 ----------------------------------------------------------------------------
 
 <p align="center">

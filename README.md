@@ -128,7 +128,7 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 
 ### Network Architecture
 
-<img src="images/nn_architecture.svg" width="450" />
+<img src="images/nn_architecture.svg" width="550" />
 
 ----------------------------------------------------------------------------
 

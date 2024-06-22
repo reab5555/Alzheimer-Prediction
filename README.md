@@ -96,7 +96,7 @@ Selected As top 10 Features:
 
 ----------------------------------------------------------------------------
 
-<p align="center">
+<p align="left">
   <img src="images/eda.png" width="1600" />
 </p>
 
@@ -134,11 +134,11 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 
 ### Evaluation Visualization
 
-<p align="center">
+<p align="left">
   <img src="images/learning_curve.png" width="600" />
 </p>
 
-<p align="center">
+<p align="left">
   <img src="images/confusion_matrix.png" width="400" />
   <img src="images/roc.png" width="400" />
 </p>

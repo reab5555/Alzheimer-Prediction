@@ -126,7 +126,7 @@ We also experimented with 5 simplier and less complex models such as Logistic Re
 - **Batch Size**: 64
 - **F1 Score**: 0.837
 
-<img src="images/nn_architecture.svg" width="800" />
+<img src="images/nn_architecture.svg" width="600" />
 
 ----------------------------------------------------------------------------
 

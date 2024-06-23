@@ -92,7 +92,7 @@ Selected As top 10 Features:
 - ADL
 - Ethnicity 1
 - Ethnicity 2
-- EducationLevel 0   
+- Education Level 0   
 
 ----------------------------------------------------------------------------
 

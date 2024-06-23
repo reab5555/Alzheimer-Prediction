@@ -20,8 +20,8 @@ This dataset contains extensive health information for 2,149 patients, each uniq
 ### Demographic Details
 - **Age**: The age of the patients ranges from 60 to 90 years.
 - **Gender**: Gender of the patients, where 0 represents Male and 1 represents Female.
-- **Ethnicity**: The ethnicity of the patients, coded as follows:
-- **Education Level**: The education level of the patients, coded as follows:
+- **Ethnicity**: The ethnicity of the patients.
+- **Education Level**: The education level of the patients.
 ### Lifestyle Factors
 - **BMI**: Body Mass Index of the patients, ranging from 15 to 40.
 - **Smoking**: Smoking status, where 0 indicates No and 1 indicates Yes.

@@ -220,7 +220,3 @@ Scripts:
 
 - Ensure the data file `alzheimers_dataset.csv` is in the correct path as specified in the `data_preprocessing.py` script.
 - Modify the file paths in the scripts if your directory structure is different.
-
-### License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.

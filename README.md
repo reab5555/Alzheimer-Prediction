@@ -100,7 +100,7 @@ Selected As top 10 Features:
   <img src="images/eda.png" width="1600" />
 </p>
 
-Here we can see for example the distribution of each of the top features. furthermore, we can see that MMSE, Functional Assesment, and ADL are negatively correlated with Positive Diagnosis of Alzheimer (Lower scores indicate cognitive impairment), while Memory Complaints and Behavioral Problems are positively correlated.  
+Here we can see for example the distribution of each of the top features. furthermore, we can see that MMSE, Functional Assesment, and ADL are negatively correlated with positive diagnosis of Alzheimer (Lower scores indicate cognitive impairment), while Memory Complaints and Behavioral Problems are positively correlated.  
 
 ----------------------------------------------------------------------------
 
